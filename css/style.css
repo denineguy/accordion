@@ -1,0 +1,88 @@
+body {
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+.accordion {
+  border: 1px solid #542437;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 10px;
+  width: 900px;
+}
+
+.accordion ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.accordion label {
+  background-color: #D95B44;
+  border: 1px solid #542437;
+  box-sizing: border-box;
+  color: black;
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 18px;
+  margin-top: 2px;
+  padding: 10px;
+  text-transform: uppercase;
+  text-shadow:1px 1px 1px gba(255,255,255,0.3);
+}
+
+.accordion ul li:first-child label {
+  clear: both;
+  margin-top: 0;
+  overflow: hidden;
+}
+
+.accordion label:hover,
+.accordion input[type=radio]:checked + label {
+  background-color: #BF2942;
+  color: white;
+  display: block;
+  text-shadow:1px 1px 1px rgba(0,0,0,0.5);
+}
+
+.accordion label > i {
+  display: inline-block;
+  float: right;
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  transition: transform .3s ease;
+  -webkit-transition: transform .3s ease;
+}
+
+.accordion input[type=radio]:checked + label > i {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transition: transform .5s ease;
+  -webkit-transition: transform .5s ease;
+}
+
+
+.accordion ul li div.content {
+  border: 1px solid #542437;
+  height: 0;
+  overflow: hidden;
+}
+
+.accordion input[type=radio]:checked ~ div {
+  display: block;
+  height: 300px;
+  padding: 10px;
+  transition: height 1s;
+  -webkit-transition: height 1s;
+}
+
+.accordion .content h3 {
+  color: #542437;
+  font-size: 18px;
+  margin: 10px 0;
+  padding: 0;
+}
